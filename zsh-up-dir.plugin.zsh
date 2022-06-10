@@ -10,6 +10,7 @@ function _up-dir {
     if [ -z $BUFFER ]; then
         parent="$(dirname $(pwd))"
         cd $parent
+        
         zle accept-line
         zle reset-prompt
     else
