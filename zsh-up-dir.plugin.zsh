@@ -10,8 +10,7 @@ function _up-dir {
     if [ -z $BUFFER ]; then
         parent="$(dirname $(pwd))"
         cd $parent
-        powerlevel9k_refresh_prompt_inplace
-        zle reset-prompt
+        zle accept-line
     else
         BUFFER=$(echo $BUFFER | perl -ne $PROG)
     fi
