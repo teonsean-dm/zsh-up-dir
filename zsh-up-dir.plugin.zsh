@@ -16,5 +16,4 @@ function _up-dir {
     fi
 
 }
-zle -N _up-dir
 bindkey "^h" _up-dir
