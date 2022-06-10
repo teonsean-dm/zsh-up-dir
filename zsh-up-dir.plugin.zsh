@@ -10,7 +10,7 @@ function _up-dir {
     if [ -z $BUFFER ]; then
         parent="$(dirname $(pwd))"
         cd $parent
-        zle -line
+        zle accept-line
     else
         BUFFER=$(echo $BUFFER | perl -ne $PROG)
     fi
