@@ -13,7 +13,6 @@ function _up-dir {
         
         zle push-line
         zle accept-line
-        zle reset-prompt
     else
         BUFFER=$(echo $BUFFER | perl -ne $PROG)
     fi
