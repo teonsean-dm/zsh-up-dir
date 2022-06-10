@@ -10,7 +10,7 @@ function _up-dir {
     if [ -z $BUFFER ]; then
         parent="$(dirname $(pwd))"
         cd $parent
-        zle reset-prompt
+        p10k display -r
     else
         BUFFER=$(echo $BUFFER | perl -ne $PROG)
     fi
