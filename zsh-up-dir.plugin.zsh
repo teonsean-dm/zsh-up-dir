@@ -11,6 +11,7 @@ function _up-dir {
         parent="$(dirname $(pwd))"
         cd $parent
         
+        zle push-line
         zle accept-line
         zle reset-prompt
     else
