@@ -10,10 +10,12 @@ function _up-dir {
     if [ -z $BUFFER ]; then
         parent="$(dirname $(pwd))"
         cd $parent
-        pwd
+        zle push-line
+        zle accept-line
     else
         BUFFER=$(echo $BUFFER | perl -ne $PROG)
     fi
 
 }
+zle -N _up-dir
 bindkey "^h" _up-dir
